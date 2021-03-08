@@ -191,7 +191,7 @@ Outputs:
     Value: !Join ['', ['https://', !GetAtt [WebContentBucket, DomainName]]]
     Description: Name of S3 bucket to hold website content
   CloudFrontURL:
-    Value: !Join ['', ['https://', !GetAtt [WebContentCDN, DomainName]]]
+    Value: !Join ['', ['https://', !GetAtt [WebContentCDN, DomainName], '/index.html']]
     Description: Name of CloudFront URL
   Github:
     Value: !Ref GitHubRepository
